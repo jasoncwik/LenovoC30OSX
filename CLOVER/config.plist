@@ -10,74 +10,11 @@
 			<false/>
 			<key>DropOEM_DSM</key>
 			<false/>
-			<key>Fixes</key>
-			<dict>
-				<key>AddDTGP_0001</key>
-				<false/>
-				<key>AddHDMI_8000000</key>
-				<false/>
-				<key>AddIMEI_80000</key>
-				<false/>
-				<key>AddMCHC_0008</key>
-				<false/>
-				<key>AddPNLF_1000000</key>
-				<false/>
-				<key>DeleteUnused_400000</key>
-				<false/>
-				<key>FIX_ACST_4000000</key>
-				<false/>
-				<key>FIX_ADP1_800000</key>
-				<false/>
-				<key>FIX_INTELGFX_100000</key>
-				<false/>
-				<key>FIX_RTC_20000</key>
-				<false/>
-				<key>FIX_S3D_2000000</key>
-				<false/>
-				<key>FakeLPC_0020</key>
-				<false/>
-				<key>FiX_TMR_40000</key>
-				<false/>
-				<key>FiX_WAK_200000</key>
-				<false/>
-				<key>FixAirport_4000</key>
-				<false/>
-				<key>FixDarwin_0002</key>
-				<false/>
-				<key>FixDisplay_0100</key>
-				<false/>
-				<key>FixFirewire_0800</key>
-				<false/>
-				<key>FixHDA_8000</key>
-				<false/>
-				<key>FixHPET_0010</key>
-				<false/>
-				<key>FixIDE_0200</key>
-				<false/>
-				<key>FixIPIC_0040</key>
-				<false/>
-				<key>FixLAN_2000</key>
-				<false/>
-				<key>FixRegions_10000000</key>
-				<false/>
-				<key>FixSATA_0400</key>
-				<false/>
-				<key>FixSBUS_0080</key>
-				<false/>
-				<key>FixShutdown_0004</key>
-				<false/>
-				<key>FixUSB_1000</key>
-				<false/>
-				<key>NewWay_80000000</key>
-				<false/>
-			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>HaltEnabler</key>
-		<false/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -106,7 +43,7 @@
 		<key>Timeout</key>
 		<integer>10</integer>
 		<key>XMPDetection</key>
-		<string>NO</string>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -141,8 +78,6 @@
 			<key>Inject</key>
 			<false/>
 		</dict>
-		<key>UseIntelHDMI</key>
-		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
@@ -152,8 +87,8 @@
 	<dict>
 		<key>Hide</key>
 		<array>
-			<string>Windows</string>
 			<string>\EFI\BOOT\BOOTX64.EFI</string>
+			<string>Windows</string>
 		</array>
 		<key>Language</key>
 		<string>en:0</string>
@@ -161,6 +96,8 @@
 		<dict>
 			<key>Enabled</key>
 			<true/>
+			<key>Mirror</key>
+			<false/>
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
@@ -212,6 +149,20 @@
 				SW50ZXJuYWw=
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Trim Enabler</string>
+				<key>Find</key>
+				<data>
+				QVBQTEUgU1NE
+				</data>
+				<key>Name</key>
+				<string>IOAHCIBlockStorage</string>
+				<key>Replace</key>
+				<data>
+				AAAAAAAAAAAA
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -225,10 +176,10 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>Trust</key>
-		<false/>
 		<key>ProductName</key>
 		<string>MacPro4,1</string>
+		<key>Trust</key>
+		<false/>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
